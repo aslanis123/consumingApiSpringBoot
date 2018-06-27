@@ -1,0 +1,1 @@
+insert into product values (1001, 'Seeds', 'Pumpkin Seeds');
