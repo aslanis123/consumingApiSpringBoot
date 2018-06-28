@@ -11,11 +11,28 @@ public class Product {
     @Column(name = "id")
     private String id;
 
+    @Column(name = "product-identifier")
+    private String productId;
+
     @Column(name = "name")
     private String productName;
 
     @Column(name = "description")
     private String productDescription;
+
+    @Column(name = "price")
+    private String price;
+
+    @Column(name = "img-url")
+    private String imgUrl;
+
+    public Product(String productId, String productName, String productDescription, String price, String imgUrl) {
+        this.productId = productId;
+        this.productName = productName;
+        this.productDescription = productDescription;
+        this.price = price;
+        this.imgUrl = imgUrl;
+    }
 
     public Product(String productName, String productDescription) {
         this.productName = productName;
@@ -47,5 +64,29 @@ public class Product {
 
     public void setProductDescription(String productDescription) {
         this.productDescription = productDescription;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 }
